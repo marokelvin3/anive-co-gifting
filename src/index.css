@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#F9FBFA] text-[#243330] antialiased selection:bg-sage-200 selection:text-sage-900;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom smooth luxury scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F2F5F4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B6C9C4;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8DAAA2;
+}
+
+/* Calligraphy and serif styling */
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.luxury-gradient {
+  background: linear-gradient(135deg, #F4F7F6 0%, #E8F0ED 50%, #E2ECE8 100%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(229, 236, 233, 0.8);
+}
+
+.glass-nav {
+  background: rgba(249, 251, 250, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(205, 218, 213, 0.4);
+}
