@@ -1,18 +1,18 @@
-/* ANIVE.CO | GIFTING — Calm Material Red Luxury Stylesheet */
+/* ANIVE.CO | GIFTING — Elegant Burgundy (#59171b) & Beige (#fed7b8) Stylesheet */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Material Design 3 Calm Red Luxury System */
-  --md-sys-color-primary: #8E2A33;
+  /* Material Design System with Burgundy & Beige Palette */
+  --md-sys-color-primary: #59171B;
   --md-sys-color-on-primary: #FFFFFF;
-  --md-sys-color-primary-container: #FCEBEB;
-  --md-sys-color-on-primary-container: #421016;
-  --md-sys-color-surface: #FCF9F9;
-  --md-sys-color-on-surface: #241A1B;
-  --md-sys-color-surface-variant: #F4E7E7;
-  --md-sys-color-outline: #857374;
-  --md-sys-color-outline-variant: #D7C1C2;
+  --md-sys-color-primary-container: #FED7B8;
+  --md-sys-color-on-primary-container: #59171B;
+  --md-sys-color-surface: #FFF9F5;
+  --md-sys-color-on-surface: #340A0E;
+  --md-sys-color-surface-variant: #FDF2E9;
+  --md-sys-color-outline: #8F2830;
+  --md-sys-color-outline-variant: #FED7B8;
 }
 
 body {
@@ -27,52 +27,74 @@ body {
   font-family: 'Cormorant Garamond', Georgia, serif;
 }
 
+/* Gradients matching user's Burgundy & Beige color swatch */
+.bg-palette-gradient {
+  background: linear-gradient(135deg, #59171B 0%, #8F2830 50%, #FED7B8 100%);
+}
+
+.bg-palette-gradient-vert {
+  background: linear-gradient(180deg, #59171B 0%, #8F2830 55%, #FED7B8 100%);
+}
+
+.bg-palette-gradient-rev {
+  background: linear-gradient(180deg, #FED7B8 0%, #8F2830 55%, #59171B 100%);
+}
+
+.border-palette-beige {
+  border-color: #FED7B8;
+}
+
+.text-palette-burgundy {
+  color: #59171B;
+}
+
+.text-palette-beige {
+  color: #FED7B8;
+}
+
 /* Glassmorphism Navigation */
 .glass-nav {
-  background: rgba(252, 249, 249, 0.94);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 249, 245, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(215, 193, 194, 0.4);
+  border: 1px solid rgba(254, 215, 184, 0.6);
 }
 
-/* Custom Tactile Calm Red Scrollbar */
+/* Custom Tactile Burgundy & Beige Scrollbar */
 ::-webkit-scrollbar {
   width: 7px;
   height: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F8F2F2;
+  background: #FFF9F5;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D7C1C2;
+  background: #FED7B8;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #B04A53;
+  background: #8F2830;
 }
 
 /* Smooth Side Drawer Shadow */
 .menu-drawer-shadow {
-  box-shadow: -10px 0 35px -5px rgba(66, 16, 22, 0.12);
+  box-shadow: -10px 0 35px -5px rgba(89, 23, 27, 0.16);
 }
 
 /* Subtle Micro-Animations */
 @keyframes floatSlow {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0px);
   }
-
   50% {
     transform: translateY(-6px);
   }
@@ -91,7 +113,6 @@ body {
     opacity: 0;
     transform: translateY(6px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);

@@ -1,11 +1,12 @@
 // Data for the 4-Step Custom Box Studio
+// Ribbon and Box finishes updated to match Burgundy (#59171b) & Beige (#fed7b8) palette
 window.AniveData = window.AniveData || {};
 
 window.AniveData.BUILDER_BOXES = [
-  { id: 'b-crimson', name: 'Calm Crimson Linen Keepsake Box', price: 34, image: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=600&auto=format&fit=crop' },
-  { id: 'b-oyster', name: 'Oyster Pearl Magnetic Chest', price: 28, image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=600&auto=format&fit=crop' },
+  { id: 'b-burgundy', name: 'Atelier Burgundy Linen Keepsake Box', price: 34, image: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=600&auto=format&fit=crop' },
+  { id: 'b-beige', name: 'Warm Beige Magnetic Chest', price: 28, image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=600&auto=format&fit=crop' },
   { id: 'b-rosewood', name: 'Deep Rosewood Minimalist Box', price: 32, image: 'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?q=80&w=600&auto=format&fit=crop' },
-  { id: 'b-tote', name: 'Woven Botanical Market Tote', price: 26, image: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=crop' },
+  { id: 'b-tote', name: 'Woven Organic Botanical Market Tote', price: 26, image: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=crop' },
 ];
 
 window.AniveData.BUILDER_ITEMS = [
@@ -22,9 +23,9 @@ window.AniveData.BUILDER_ITEMS = [
 ];
 
 window.AniveData.RIBBONS = [
-  { id: 'r-calmred', name: 'Calm Ruby Silk', hex: '#8E2A33' },
-  { id: 'r-rosewood', name: 'Rosewood Velvet', hex: '#B04A53' },
-  { id: 'r-rosewater', name: 'Pale Rosewater Silk', hex: '#E5ACB0' },
+  { id: 'r-burgundy', name: 'Atelier Burgundy Silk (#59171b)', hex: '#59171B' },
+  { id: 'r-beige', name: 'Warm Beige Blush (#fed7b8)', hex: '#FED7B8' },
+  { id: 'r-rosewood', name: 'Rosewood Velvet', hex: '#8F2830' },
   { id: 'r-oyster', name: 'Oyster Pearl Ribbon', hex: '#DED9D2' },
   { id: 'r-champagne', name: 'Muted Gold / Champagne', hex: '#CBB284' }
 ];

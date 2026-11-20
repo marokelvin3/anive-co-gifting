@@ -1,10 +1,9 @@
 (function() {
-  const { useState, useEffect, useMemo } = React;
+  const { useState, useMemo } = React;
   function App() {
     const [currentRoute, setCurrentRoute] = useState("home");
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [currency, setCurrency] = useState("USD");
-    const [selectedCategory, setSelectedCategory] = useState("all");
     const [searchQuery, setSearchQuery] = useState("");
     const [cart, setCart] = useState([]);
     const [wishlist, setWishlist] = useState([]);
@@ -26,7 +25,7 @@
       return `${c.symbol}${amt.toFixed(0)}`;
     };
     const addToCart = (product, opts = {}) => {
-      const key = `${product.id}-${opts.monogram || "none"}-${opts.ribbon || "ruby"}`;
+      const key = `${product.id}-${opts.monogram || "none"}-${opts.ribbon || "burgundy"}`;
       const unitPrice = product.price + (opts.monogram ? 10 : 0);
       setCart((prev) => {
         const idx = prev.findIndex((item) => item.key === key);
@@ -80,19 +79,11 @@
     const corpTotal = corpUnitDiscounted * corpQty;
     const products = window.AniveData.PRODUCTS || [];
     const categories = window.AniveData.CATEGORIES || [];
-    const filteredProducts = useMemo(() => {
-      return products.filter((p) => {
-        if (selectedCategory !== "all" && p.categoryId !== selectedCategory) return false;
-        if (searchQuery) {
-          const q = searchQuery.toLowerCase();
-          const m1 = p.name.toLowerCase().includes(q);
-          const m2 = p.categoryName.toLowerCase().includes(q);
-          const m3 = p.shortDesc.toLowerCase().includes(q);
-          if (!m1 && !m2 && !m3) return false;
-        }
-        return true;
-      });
-    }, [selectedCategory, searchQuery, products]);
+    const searchFilteredCategory = useMemo(() => {
+      if (!searchQuery) return null;
+      const q = searchQuery.toLowerCase();
+      return categories.find((c) => c.name.toLowerCase().includes(q) || c.id.toLowerCase().includes(q));
+    }, [searchQuery, categories]);
     const handleSelectCategoryPage = (catId) => {
       if (catId === "home") {
         setCurrentRoute("home");
@@ -101,22 +92,25 @@
       }
       window.scrollTo({ top: 0, behavior: "smooth" });
     };
+    const handleSearchSubmit = (catId) => {
+      handleSelectCategoryPage(catId);
+      setSearchQuery("");
+    };
     const currentCategoryObject = categories.find((c) => c.id === currentRoute);
     const {
       Navbar,
       Hero,
+      AtelierStory,
+      CustomStudioHighlight,
+      ConciergeInfo,
       Categories,
       CategoriesMenu,
       CategoryPage,
-      ProductCatalog,
-      EmergencyBanner,
-      CorporateSection,
-      ContactSection,
       Footer,
       CustomBuilder,
       Modals
     } = window.AniveComponents;
-    return /* @__PURE__ */ React.createElement("div", { className: "min-h-screen flex flex-col bg-mred-50/20 text-mred-950 font-sans selection:bg-mred-100 selection:text-mred-900" }, toast && /* @__PURE__ */ React.createElement("div", { className: "fixed bottom-6 right-6 z-50 bg-mred-950 text-white px-5 py-3 rounded-2xl shadow-luxury flex items-center gap-3 text-xs border border-mred-700/60 animate-bounce" }, /* @__PURE__ */ React.createElement("span", { className: "w-2 h-2 rounded-full bg-accent-champagne" }), /* @__PURE__ */ React.createElement("span", null, toast)), /* @__PURE__ */ React.createElement(
+    return /* @__PURE__ */ React.createElement("div", { className: "min-h-screen flex flex-col bg-[#FFF9F5] text-[#210507] font-sans selection:bg-[#FED7B8] selection:text-[#59171B]" }, toast && /* @__PURE__ */ React.createElement("div", { className: "fixed bottom-6 right-6 z-50 bg-[#210507] text-[#FED7B8] px-5 py-3 rounded-2xl shadow-luxury flex items-center gap-3 text-xs border border-[#FED7B8]/40 animate-bounce" }, /* @__PURE__ */ React.createElement("span", { className: "w-2 h-2 rounded-full bg-[#FED7B8]" }), /* @__PURE__ */ React.createElement("span", null, toast)), /* @__PURE__ */ React.createElement(
       Navbar,
       {
         currency,
@@ -132,7 +126,21 @@
         onNavigateHome: () => handleSelectCategoryPage("home"),
         onNavigateCategory: handleSelectCategoryPage
       }
-    ), /* @__PURE__ */ React.createElement(
+    ), searchQuery && /* @__PURE__ */ React.createElement("div", { className: "bg-[#FED7B8]/30 border-b border-[#FED7B8] py-2 px-4 text-xs flex items-center justify-between" }, /* @__PURE__ */ React.createElement("div", { className: "max-w-7xl mx-auto w-full flex items-center justify-between" }, /* @__PURE__ */ React.createElement("span", null, "Searching for ", /* @__PURE__ */ React.createElement("strong", null, '"', searchQuery, '"'), searchFilteredCategory && /* @__PURE__ */ React.createElement("span", { className: "ml-2 text-[#59171B]" }, "Found department: ", /* @__PURE__ */ React.createElement("strong", null, searchFilteredCategory.name))), searchFilteredCategory ? /* @__PURE__ */ React.createElement(
+      "button",
+      {
+        onClick: () => handleSearchSubmit(searchFilteredCategory.id),
+        className: "bg-[#59171B] text-[#FED7B8] px-3 py-1 rounded-full font-bold hover:bg-[#471015]"
+      },
+      "View Department Page \u2192"
+    ) : /* @__PURE__ */ React.createElement(
+      "button",
+      {
+        onClick: () => setSearchQuery(""),
+        className: "text-mred-600 underline"
+      },
+      "Clear"
+    ))), /* @__PURE__ */ React.createElement(
       CategoriesMenu,
       {
         isOpen: isMenuOpen,
@@ -144,61 +152,33 @@
         onOpenSourcing: () => setIsSourcingOpen(true)
       }
     ), /* @__PURE__ */ React.createElement("main", { className: "flex-1" }, currentRoute === "home" ? (
-      /* HOME VIEW */
+      /* HOME VIEW - Concise, pure home information, NO endless product catalog clutter */
       /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(
         Hero,
         {
           onOpenBuilder: () => setIsBuilderOpen(true),
           onToggleMenu: () => setIsMenuOpen(true)
         }
-      ), /* @__PURE__ */ React.createElement(
+      ), /* @__PURE__ */ React.createElement(AtelierStory, null), /* @__PURE__ */ React.createElement(
         Categories,
         {
           categories,
-          onSelectCategoryPage: handleSelectCategoryPage,
-          onOpenBuilder: () => setIsBuilderOpen(true),
-          onOpenSourcing: () => setIsSourcingOpen(true)
+          onSelectCategoryPage: handleSelectCategoryPage
         }
       ), /* @__PURE__ */ React.createElement(
-        ProductCatalog,
+        CustomStudioHighlight,
         {
-          products: filteredProducts,
-          categories,
-          selectedCategory,
-          onSelectCategory: setSelectedCategory,
-          onSelectCategoryPage: handleSelectCategoryPage,
-          wishlist,
-          onToggleWishlist: toggleWishlist,
-          onSelectProduct: setSelectedProduct,
-          onAddToCart: addToCart,
-          formatPrice
+          onOpenBuilder: () => setIsBuilderOpen(true)
         }
       ), /* @__PURE__ */ React.createElement(
-        EmergencyBanner,
+        ConciergeInfo,
         {
-          onFilterEmergency: () => handleSelectCategoryPage("emergency"),
+          onOpenSourcing: () => setIsSourcingOpen(true),
           onShowToast: showToast
         }
-      ), /* @__PURE__ */ React.createElement(
-        CorporateSection,
-        {
-          corpQty,
-          setCorpQty,
-          corpTier,
-          setCorpTier,
-          corpDeboss,
-          setCorpDeboss,
-          corpRibbon,
-          setCorpRibbon,
-          corpTotal,
-          corpUnitDiscounted,
-          corpDiscountRate,
-          formatPrice,
-          onShowToast: showToast
-        }
-      ), /* @__PURE__ */ React.createElement(ContactSection, { onShowToast: showToast }))
+      ))
     ) : (
-      /* DEDICATED INDIVIDUAL CATEGORY PAGE VIEW */
+      /* DEDICATED STANDALONE CATEGORY PAGE - Carries all category products and specific tools */
       /* @__PURE__ */ React.createElement(
         CategoryPage,
         {
@@ -213,7 +193,19 @@
           onOpenSourcing: () => setIsSourcingOpen(true),
           wishlist,
           onToggleWishlist: toggleWishlist,
-          formatPrice
+          formatPrice,
+          corpQty,
+          setCorpQty,
+          corpTier,
+          setCorpTier,
+          corpDeboss,
+          setCorpDeboss,
+          corpRibbon,
+          setCorpRibbon,
+          corpTotal,
+          corpUnitDiscounted,
+          corpDiscountRate,
+          onShowToast: showToast
         }
       )
     )), /* @__PURE__ */ React.createElement(
