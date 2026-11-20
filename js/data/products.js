@@ -169,7 +169,7 @@ window.AniveData.PRODUCTS = [
     categoryName: 'Thank You & Appreciation Gifts',
     price: 98,
     badge: 'Gratitude Suite',
-    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1000&auto=format&fit=crop',
     shortDesc: 'The gentlest way to say "Thank you for everything". Soothing herbal botanical teas and nourishing shea body soufflé.',
     fullDesc: 'When words aren’t enough to convey heartfelt thankfulness to a physician, host, mentor or colleague, this serene box says it with profound grace.',
     contents: [
@@ -189,7 +189,7 @@ window.AniveData.PRODUCTS = [
     categoryName: 'Custom Gifting',
     price: 150,
     badge: 'Interactive Builder',
-    image: 'https://images.unsplash.com/photo-1607344645866-009c320c5ab8?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1520006403909-838d6b92c22e?q=80&w=1000&auto=format&fit=crop',
     shortDesc: 'Curated by you, assembled by our master atelier. Use our 4-step builder to select your packaging, gifts, and calligraphy.',
     fullDesc: 'The ultimate bespoke experience. Select from our library of hand-curated ethical artisanal products, luxury gift vessels, raw silk ribbons, and personalised lettering.',
     contents: [

@@ -142,7 +142,7 @@ window.AniveData.CATEGORIES = [
       'Whipped shea butter and frankincense botanical skin balms',
       'Personalised hand-lettered calligraphy gratitude message'
     ],
-    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1000&auto=format&fit=crop',
     badge: 'Gratitude Suite',
     itemCount: '16 Curations'
   },
@@ -158,7 +158,7 @@ window.AniveData.CATEGORIES = [
       'Curated library of over 50 ethical luxury makers',
       'Real-time calligraphy card preview and live order calculation'
     ],
-    image: 'https://images.unsplash.com/photo-1607344645866-009c320c5ab8?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1520006403909-838d6b92c22e?q=80&w=1000&auto=format&fit=crop',
     badge: 'Interactive Studio',
     itemCount: 'Build Your Own'
   },

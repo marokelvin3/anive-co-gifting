@@ -106,22 +106,22 @@
       Navbar,
       Hero,
       Categories,
+      CategoriesMenu,
+      CategoryPage,
       ProductCatalog,
       EmergencyBanner,
       CorporateSection,
       ContactSection,
       Footer,
       CustomBuilder,
-      Modals,
-      CategoriesMenu,
-      CategoryPage
+      Modals
     } = window.AniveComponents;
-    return /* @__PURE__ */ React.createElement("div", { className: "min-h-screen flex flex-col bg-surface-100 text-[#241A1B]" }, toast && /* @__PURE__ */ React.createElement("div", { className: "fixed bottom-6 right-6 z-50 bg-mred-900 text-white px-5 py-3 rounded-2xl shadow-luxury border border-mred-700/60 flex items-center gap-3 text-xs font-medium" }, /* @__PURE__ */ React.createElement("span", { className: "w-5 h-5 rounded-full bg-mred-600 flex items-center justify-center text-white text-[10px]" }, "\u2713"), /* @__PURE__ */ React.createElement("span", null, toast)), /* @__PURE__ */ React.createElement(
+    return /* @__PURE__ */ React.createElement("div", { className: "min-h-screen flex flex-col bg-mred-50/20 text-mred-950 font-sans selection:bg-mred-100 selection:text-mred-900" }, toast && /* @__PURE__ */ React.createElement("div", { className: "fixed bottom-6 right-6 z-50 bg-mred-950 text-white px-5 py-3 rounded-2xl shadow-luxury flex items-center gap-3 text-xs border border-mred-700/60 animate-bounce" }, /* @__PURE__ */ React.createElement("span", { className: "w-2 h-2 rounded-full bg-accent-champagne" }), /* @__PURE__ */ React.createElement("span", null, toast)), /* @__PURE__ */ React.createElement(
       Navbar,
       {
         currency,
         setCurrency,
-        cartCount: cart.reduce((a, c) => a + c.quantity, 0),
+        cartCount: cart.reduce((a, b) => a + b.quantity, 0),
         wishlistCount: wishlist.length,
         searchQuery,
         setSearchQuery,
@@ -139,7 +139,9 @@
         onToggle: () => setIsMenuOpen(!isMenuOpen),
         categories,
         activeCategoryId: currentRoute,
-        onSelectCategoryPage: handleSelectCategoryPage
+        onSelectCategoryPage: handleSelectCategoryPage,
+        onOpenBuilder: () => setIsBuilderOpen(true),
+        onOpenSourcing: () => setIsSourcingOpen(true)
       }
     ), /* @__PURE__ */ React.createElement("main", { className: "flex-1" }, currentRoute === "home" ? (
       /* HOME VIEW */
