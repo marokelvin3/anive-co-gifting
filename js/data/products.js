@@ -1,4 +1,4 @@
-// Curated Products Data for ANIVE.CO | GIFTING
+// Curated Products Data for ANIVE.CO | GIFTING (Without Dummy Reviews or 2pm Same-Day Dispatch Text)
 window.AniveData = window.AniveData || {};
 
 window.AniveData.PRODUCTS = [
@@ -8,22 +8,19 @@ window.AniveData.PRODUCTS = [
     categoryId: 'bridesmaids',
     categoryName: 'Bridesmaids Gift Boxes & Bags',
     price: 135,
-    rating: 4.9,
-    reviewsCount: 128,
-    badge: 'Bridal Bestseller',
+    badge: 'Bridal Atelier',
     image: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=1000&auto=format&fit=crop',
-    shortDesc: 'A soothing eucalyptus linen keepsake box filled with Mulberry silk essentials for your maid of honour and bridesmaids.',
-    fullDesc: 'Curated to envelope your closest circle in pure tranquility on the wedding morning. Encased in a rigid linen box with sage satin ribbon, each piece is thoughtfully chosen for pampering, memories, and wedding day photography.',
+    shortDesc: 'A soothing rosewood linen keepsake box filled with Mulberry silk essentials for your maid of honour and bridesmaids.',
+    fullDesc: 'Curated to envelope your closest circle in pure tranquility on the wedding morning. Encased in a rigid linen box with crimson satin ribbon, each piece is thoughtfully chosen for pampering, memories, and wedding day photography.',
     contents: [
       '100% Pure Mulberry Silk Eyemask (Embroidered initials)',
       'Rose Quartz Facial Gua Sha Sculpting Tool',
-      'Hand-Poured Lavender & Sea Salt Soy Votive (45hr burn)',
+      'Hand-Poured Rose & Amber Soy Votive (45hr burn)',
       'Sugarfina Champagne Gummy Bears',
       'Hand-lettered Gold Foil "Will You Stand by Me?" Card'
     ],
-    dispatchTime: 'Dispatches in 24h',
-    allowsMonogram: true,
-    isEmergencyReady: false
+    dispatchTime: 'Handmade in Atelier',
+    allowsMonogram: true
   },
   {
     id: 'anive-02',
@@ -31,8 +28,6 @@ window.AniveData.PRODUCTS = [
     categoryId: 'personalised',
     categoryName: 'Personalised Gift Boxes',
     price: 165,
-    rating: 5.0,
-    reviewsCount: 94,
     badge: 'Custom Hot-Foil',
     image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=1000&auto=format&fit=crop',
     shortDesc: 'Handcrafted rigid oyster keepsake box stamped with personalized initials in bespoke matte champagne foil.',
@@ -44,32 +39,28 @@ window.AniveData.PRODUCTS = [
       'Artisanal Single-Origin Dominican Republic Dark Chocolate',
       'Personalised Custom Name Vellum Envelope'
     ],
-    dispatchTime: 'Custom 2-3 Days',
-    allowsMonogram: true,
-    isEmergencyReady: false
+    dispatchTime: 'Bespoke 2-3 Days',
+    allowsMonogram: true
   },
   {
     id: 'anive-03',
-    name: 'The 2-Hour Express Respite Box',
+    name: 'The Priority Respite Box',
     categoryId: 'emergency',
     categoryName: 'Emergency & Last-Minute Gifting',
     price: 120,
-    rating: 4.9,
-    reviewsCount: 210,
-    badge: 'Same-Day Dispatch',
+    badge: 'Expedited Priority',
     image: 'https://images.unsplash.com/photo-1512909006721-3d6018887383?q=80&w=1000&auto=format&fit=crop',
-    shortDesc: 'Pre-assembled, perfectly balanced luxury emergency rescue gift. Order before 2 PM for immediate same-day priority dispatch.',
-    fullDesc: 'Life moves fast. When a birthday, promotion, or apology requires immediate distinction, our Emergency Respite box is pre-assembled in our atelier, sealed with a fresh sage bow and expedited with priority tracking.',
+    shortDesc: 'Pre-assembled, perfectly balanced luxury rescue gift ready for immediate priority handling.',
+    fullDesc: 'Life moves fast. When a birthday, promotion, or milestone requires immediate distinction, our Priority Respite box is pre-assembled in our atelier, sealed with a fresh bow and dispatched with priority tracking.',
     contents: [
       'Artisanal Sea Salt Caramel Truffle Box (Set of 9)',
       'Cedarwood & Bergamot Hand Therapy Balm (75ml)',
-      'Handcrafted Ceramic Mug in Spearmint Glaze',
+      'Handcrafted Ceramic Mug in Rose Glaze',
       'Loose Leaf Calming Chamomile Infusion (50g)',
-      'Urgent Calligraphy Card with Your Custom Note'
+      'Calligraphy Card with Your Custom Note'
     ],
-    dispatchTime: 'Dispatches Today (Order by 2pm)',
-    allowsMonogram: false,
-    isEmergencyReady: true
+    dispatchTime: 'Priority Handling',
+    allowsMonogram: false
   },
   {
     id: 'anive-04',
@@ -77,22 +68,19 @@ window.AniveData.PRODUCTS = [
     categoryId: 'corporate',
     categoryName: 'Corporate Gifting',
     price: 195,
-    rating: 5.0,
-    reviewsCount: 162,
-    badge: 'B2B Top Rated',
+    badge: 'Executive Suite',
     image: 'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?q=80&w=1000&auto=format&fit=crop',
     shortDesc: 'Understated corporate excellence with custom blind-debossed client logos and premium executive accoutrements.',
     fullDesc: 'Engineered for high-stakes investor appreciation, partner onboarding, and executive retreats. Delivers a sophisticated message of respect and partnership without gaudy corporate branding.',
     contents: [
       'Full Grain Italian Pebble Leather Padfolio (Debossed)',
-      'Insulated Matte Slate Steel Tumbler (Bespoke Etch)',
+      'Insulated Matte Steel Tumbler (Bespoke Etch)',
       'Single-Estate Kona Reserve Coffee Beans (250g)',
       'Gourmet Smoked Almond & Maple Glaze Tin',
       'Branded Corporate Letterpress Welcome Stationery'
     ],
-    dispatchTime: 'Volume Ready (3-5 Days)',
-    allowsMonogram: true,
-    isEmergencyReady: false
+    dispatchTime: 'Volume Ready',
+    allowsMonogram: true
   },
   {
     id: 'anive-05',
@@ -100,11 +88,9 @@ window.AniveData.PRODUCTS = [
     categoryId: 'birthday',
     categoryName: 'Birthday & Celebration Gifts',
     price: 145,
-    rating: 4.8,
-    reviewsCount: 88,
     badge: 'Celebration Delight',
     image: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=1000&auto=format&fit=crop',
-    shortDesc: 'Pop the cork in style. A joyous unboxing featuring bubbly effervescence, gold sparkle matches, and celebration confections.',
+    shortDesc: 'A joyous unboxing featuring bubbly effervescence, gold sparkle matches, and celebration confections.',
     fullDesc: 'Every year is a victory worthy of celebration. This bright yet serene gift box combines party sparkle with calm restorative indulgence.',
     contents: [
       'Artisanal Non-Alcoholic French Sparkling Rosé',
@@ -113,9 +99,8 @@ window.AniveData.PRODUCTS = [
       'Birthday Confetti Shortbread Biscuits',
       'Hand-foiled Letterpress Card'
     ],
-    dispatchTime: 'Dispatches in 24h',
-    allowsMonogram: true,
-    isEmergencyReady: true
+    dispatchTime: 'Handmade in Atelier',
+    allowsMonogram: true
   },
   {
     id: 'anive-06',
@@ -123,22 +108,19 @@ window.AniveData.PRODUCTS = [
     categoryId: 'proposal',
     categoryName: 'Proposal & “Will You Be My…” Gifts',
     price: 110,
-    rating: 5.0,
-    reviewsCount: 147,
     badge: 'Heartfelt Keepsake',
     image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1000&auto=format&fit=crop',
-    shortDesc: 'The ultimate heartfelt invitation to stand by your side. Styled in seafoam green velvet and gold foil calligraphy.',
+    shortDesc: 'The ultimate heartfelt invitation to stand by your side. Styled in ruby red velvet and gold foil calligraphy.',
     fullDesc: 'Ask the most important bridal question with tenderness. Includes a hidden magnetic keepsake box that transforms into a jewelry organizer post-wedding.',
     contents: [
       'Personalised Frosted Glass Tumbler with Bamboo Straw',
-      'Silk Velvet Scrunchie in Dusty Eucalyptus',
+      'Silk Velvet Scrunchie in Dusty Rose',
       'Sweet Almond & Vanilla Botanical Bath Salts',
       'Dainty 14k Gold Plated Heart Knot Ring Dish',
       '"I Couldn\'t Say I Do Without You" Reveal Envelope'
     ],
-    dispatchTime: 'Dispatches in 24h',
-    allowsMonogram: true,
-    isEmergencyReady: false
+    dispatchTime: 'Handmade in Atelier',
+    allowsMonogram: true
   },
   {
     id: 'anive-07',
@@ -146,22 +128,19 @@ window.AniveData.PRODUCTS = [
     categoryId: 'wedding',
     categoryName: 'Wedding & Event Gifting',
     price: 85,
-    rating: 4.9,
-    reviewsCount: 76,
-    badge: 'Destination Favorite',
+    badge: 'Hospitality Favorite',
     image: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000&auto=format&fit=crop',
     shortDesc: 'Canvas botanical tote bag tailored for destination wedding guests with bespoke itinerary inserts and local delicacies.',
     fullDesc: 'Welcome loved ones from across the globe into their hotel suites with warm hospitality. Fully customisable with your wedding weekend timeline and monogram.',
     contents: [
-      'Heavyweight 100% Organic Canvas Tote with Olive Green Trim',
+      'Heavyweight 100% Organic Canvas Tote with Crimson Trim',
       'Artisanal Rosemary & Sea Salt Flatbread Crisps',
       'Sparkling Botanical Elderflower & Mint Elixir',
       'Organic Lavender Pillow Sleep Mist (30ml)',
       'Custom Printed Wedding Weekend Map'
     ],
-    dispatchTime: 'Bulk Ready (5-7 Days)',
-    allowsMonogram: true,
-    isEmergencyReady: false
+    dispatchTime: 'Bulk Ready',
+    allowsMonogram: true
   },
   {
     id: 'anive-08',
@@ -169,22 +148,19 @@ window.AniveData.PRODUCTS = [
     categoryId: 'anniversary',
     categoryName: 'Anniversary & Romantic Gifting',
     price: 175,
-    rating: 5.0,
-    reviewsCount: 119,
-    badge: 'Anniversary Icon',
+    badge: 'Romance Suite',
     image: 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=1000&auto=format&fit=crop',
     shortDesc: 'A poetic celebration of enduring love. Features hand-dipped beeswax tapers, couple conversation prompts, and dark chocolate.',
     fullDesc: 'Crafted for milestones from the first anniversary paper year to golden jubilees. Transforms an evening at home into an intimate, sensory candlelit rendezvous.',
     contents: [
       'Pair of Fluted Ceramic Candlestick Holders',
-      'Hand-Dipped French Sage Beeswax Taper Candles',
+      'Hand-Dipped French Beeswax Taper Candles',
       'Artisanal Hazelnut Praline Box (12 pieces)',
       '100 Meaningful Couple Connection Conversation Prompts',
       'Handmade Botanical Love Letter on Deckled Paper'
     ],
-    dispatchTime: 'Dispatches in 24h',
-    allowsMonogram: true,
-    isEmergencyReady: true
+    dispatchTime: 'Handmade in Atelier',
+    allowsMonogram: true
   },
   {
     id: 'anive-09',
@@ -192,22 +168,19 @@ window.AniveData.PRODUCTS = [
     categoryId: 'thankyou',
     categoryName: 'Thank You & Appreciation Gifts',
     price: 98,
-    rating: 4.8,
-    reviewsCount: 153,
     badge: 'Gratitude Suite',
     image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=1000&auto=format&fit=crop',
     shortDesc: 'The gentlest way to say "Thank you for everything". Soothing herbal botanical teas and nourishing shea body soufflé.',
     fullDesc: 'When words aren’t enough to convey heartfelt thankfulness to a physician, host, mentor or colleague, this serene box says it with profound grace.',
     contents: [
-      'Hand-thrown Spearmint Ceramic Teacup',
+      'Hand-thrown Ceramic Teacup',
       'Organic White Peony & Jasmine Loose Tea (40g)',
       'Gold Fine Mesh Heart Tea Infuser',
       'Whipped Shea & Frankincense Body Cream (100ml)',
       'Handwritten Deckled Thank You Card'
     ],
-    dispatchTime: 'Dispatches in 24h',
-    allowsMonogram: false,
-    isEmergencyReady: true
+    dispatchTime: 'Handmade in Atelier',
+    allowsMonogram: false
   },
   {
     id: 'anive-10',
@@ -215,22 +188,19 @@ window.AniveData.PRODUCTS = [
     categoryId: 'custom',
     categoryName: 'Custom Gifting',
     price: 150,
-    rating: 5.0,
-    reviewsCount: 340,
     badge: 'Interactive Builder',
     image: 'https://images.unsplash.com/photo-1607344645866-009c320c5ab8?q=80&w=1000&auto=format&fit=crop',
     shortDesc: 'Curated by you, assembled by our master atelier. Use our 4-step builder to select your packaging, gifts, and calligraphy.',
     fullDesc: 'The ultimate bespoke experience. Select from our library of hand-curated ethical artisanal products, luxury gift vessels, raw silk ribbons, and personalised lettering.',
     contents: [
-      'Your choice of Luxury Keepsake Box (Sage, Oyster, or Slate)',
+      'Your choice of Luxury Keepsake Box (Crimson, Oyster, or Rosewood)',
       '3 to 6 Artisanal Curated Gifts chosen by you',
       'Hand-torn Silk Ribbon in bespoke colorway',
       'Preserved Olive & Ruscus Greenery sprig',
       'Wax-Sealed Hand-Calligraphed Envelope'
     ],
     dispatchTime: 'Handmade 24-48h',
-    allowsMonogram: true,
-    isEmergencyReady: false
+    allowsMonogram: true
   },
   {
     id: 'anive-11',
@@ -238,8 +208,6 @@ window.AniveData.PRODUCTS = [
     categoryId: 'sourcing',
     categoryName: 'Gift Sourcing & Curation',
     price: 350,
-    rating: 5.0,
-    reviewsCount: 42,
     badge: 'White-Glove Sourcing',
     image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1000&auto=format&fit=crop',
     shortDesc: 'A dedicated curation director will scour global ateliers to source rare, bespoke, or custom-manufactured gifting concepts.',
@@ -252,8 +220,7 @@ window.AniveData.PRODUCTS = [
       'Global White-Glove Multi-Drop Courier Logistics'
     ],
     dispatchTime: 'Private Consultation',
-    allowsMonogram: true,
-    isEmergencyReady: false
+    allowsMonogram: true
   },
   {
     id: 'anive-12',
@@ -261,22 +228,19 @@ window.AniveData.PRODUCTS = [
     categoryId: 'favours',
     categoryName: 'Event Favours & Guest Gifts',
     price: 75,
-    rating: 4.9,
-    reviewsCount: 89,
     badge: 'Bulk Favours',
     image: 'https://images.unsplash.com/photo-1532712938310-34cb3982ef74?q=80&w=1000&auto=format&fit=crop',
     shortDesc: 'Charming mini gift boxes with hand-poured soy votives, botanical seed paper, and customized monogram wax seals.',
     fullDesc: 'Ensure your event guests leave with a fragrant reminder of your special evening. Ideal for bridal showers, dinner galas, and wedding receptions.',
     contents: [
-      '10x Mini Textured Sage Gift Boxes (8x8cm)',
-      '10x Hand-Poured Bergamot & Sea Breeze Soy Votives',
+      '10x Mini Textured Keepsake Gift Boxes (8x8cm)',
+      '10x Hand-Poured Rose & Sea Breeze Soy Votives',
       '10x Wildflower Plantable Seed Gift Tags',
-      '10x Silk Cord Ties with Olive Green Wax Seal',
+      '10x Silk Cord Ties with Crimson Wax Seal',
       'Customised Couple or Event Host Name Printing'
     ],
     dispatchTime: 'Dispatches in 3-4 Days',
-    allowsMonogram: true,
-    isEmergencyReady: false
+    allowsMonogram: true
   },
   {
     id: 'anive-13',
@@ -284,22 +248,19 @@ window.AniveData.PRODUCTS = [
     categoryId: 'baby',
     categoryName: 'Baby & New Mum Gifts',
     price: 160,
-    rating: 5.0,
-    reviewsCount: 112,
     badge: 'New Mum Essential',
     image: 'https://images.unsplash.com/photo-1555252333-9f8e92e65df9?q=80&w=1000&auto=format&fit=crop',
     shortDesc: 'A tender tribute to the postpartum mother and precious newborn. Ultra-soft organic bamboo and restorative botanical balms.',
     fullDesc: 'Balances tender organic items for the little one with restorative perineal and breast care herbal remedies for the new mum.',
     contents: [
-      'GOTS-Certified Organic Muslin Swaddle Blanket (Sage Leaf)',
+      'GOTS-Certified Organic Muslin Swaddle Blanket (Blush)',
       'Handcrafted Beechwood & Silicone Teething Rattle',
       'Organic Calendula & Chamomile Nipple & Skin Salve',
       'Postpartum Nursing Herbal Tea Infusion',
       'Keepsake Embossed Baby Milestone Journal'
     ],
-    dispatchTime: 'Dispatches in 24h',
-    allowsMonogram: true,
-    isEmergencyReady: true
+    dispatchTime: 'Handmade in Atelier',
+    allowsMonogram: true
   },
   {
     id: 'anive-14',
@@ -307,22 +268,19 @@ window.AniveData.PRODUCTS = [
     categoryId: 'luxury',
     categoryName: 'Luxury & Premium Gifting',
     price: 395,
-    rating: 5.0,
-    reviewsCount: 64,
     badge: 'Haute Prestige',
     image: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=1000&auto=format&fit=crop',
     shortDesc: 'The absolute zenith of refined gift-giving. Scottish cashmere throw, hand-cut crystal glasses, and heirloom presentation case.',
-    fullDesc: 'Presented in an oversized handcrafted wooden keepsake trunk bound in slate bridle leather. Unmatched in poise, craftsmanship, and pure sensory indulgence.',
+    fullDesc: 'Presented in an oversized handcrafted wooden keepsake trunk bound in bridle leather. Unmatched in poise, craftsmanship, and pure sensory indulgence.',
     contents: [
-      '100% Pure Scottish Cashmere Fringe Throw (Muted Mist Grey)',
+      '100% Pure Scottish Cashmere Fringe Throw',
       'Pair of Hand-Blown Fluted Crystal Champagne Coupes',
       'Reserve Estate Raw Leather Coaster Set (Hand-stitched)',
-      'Baobab & Cardamom Luxury Triple-Wick Scented Candle',
+      'Rosewood & Amber Luxury Triple-Wick Scented Candle',
       'Hand-Carved Walnut Keepsake Chest with Brass Hinges'
     ],
-    dispatchTime: 'Courier Express 24h',
-    allowsMonogram: true,
-    isEmergencyReady: false
+    dispatchTime: 'Courier Express',
+    allowsMonogram: true
   },
   {
     id: 'anive-15',
@@ -330,21 +288,18 @@ window.AniveData.PRODUCTS = [
     categoryId: 'holiday',
     categoryName: 'Holiday & Seasonal Gifting',
     price: 155,
-    rating: 4.9,
-    reviewsCount: 178,
     badge: 'Seasonal Collection',
     image: 'https://images.unsplash.com/photo-1543257580-7269da773bf5?q=80&w=1000&auto=format&fit=crop',
-    shortDesc: 'Festive cheer enveloped in cool frosted greens. Spiced orange pomander, mull wine spices, and gilded pinecone keepsakes.',
-    fullDesc: 'Celebrate the warmth of the holidays with a serene, understated palette that departs from noisy commercial colours in favour of quiet winter luxury.',
+    shortDesc: 'Festive cheer enveloped in calm crimson hues. Spiced orange pomander, mull wine spices, and gilded pinecone keepsakes.',
+    fullDesc: 'Celebrate the warmth of the holidays with a serene, understated calm red palette that departs from noisy commercial colours in favour of quiet festive luxury.',
     contents: [
-      'Spiced Bitter Orange & Siberian Pine Needle Scented Candle',
+      'Spiced Bitter Orange & Damask Rose Needle Scented Candle',
       'Organic Artisanal Mulling Spices in Muslin Sachet',
       'Gilded Ceramic Pinecone Holiday Tree Keepsake',
       'Dark Chocolate Gingerbread Toffee Bark',
       'Seasonal Botanical Greeting Card with Wax Seal'
     ],
-    dispatchTime: 'Dispatches in 24h',
-    allowsMonogram: true,
-    isEmergencyReady: true
+    dispatchTime: 'Handmade in Atelier',
+    allowsMonogram: true
   }
 ];

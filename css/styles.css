@@ -1,17 +1,23 @@
-/* ANIVE.CO | GIFTING — Modern Calm Luxury Stylesheet */
+/* ANIVE.CO | GIFTING — Calm Material Red Luxury Stylesheet */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --color-sage-primary: #53726A;
-  --color-sage-dark: #30423D;
-  --color-slate-cool: #586F7C;
-  --color-bg-base: #F8FAF9;
+  /* Material Design 3 Calm Red Luxury System */
+  --md-sys-color-primary: #8E2A33;
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-primary-container: #FCEBEB;
+  --md-sys-color-on-primary-container: #421016;
+  --md-sys-color-surface: #FCF9F9;
+  --md-sys-color-on-surface: #241A1B;
+  --md-sys-color-surface-variant: #F4E7E7;
+  --md-sys-color-outline: #857374;
+  --md-sys-color-outline-variant: #D7C1C2;
 }
 
 body {
-  background-color: var(--color-bg-base);
-  color: #243330;
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -21,54 +27,59 @@ body {
   font-family: 'Cormorant Garamond', Georgia, serif;
 }
 
-/* Calm Luxury Glassmorphism & Borders */
+/* Glassmorphism Navigation */
 .glass-nav {
-  background: rgba(248, 250, 249, 0.94);
+  background: rgba(252, 249, 249, 0.94);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(205, 218, 213, 0.4);
+  border: 1px solid rgba(215, 193, 194, 0.4);
 }
 
-/* Custom Tactile Scrollbar */
+/* Custom Tactile Calm Red Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F2F5F4;
+  background: #F8F2F2;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #B6C9C4;
+  background: #D7C1C2;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #8DAAA2;
+  background: #B04A53;
+}
+
+/* Smooth Side Drawer Shadow */
+.menu-drawer-shadow {
+  box-shadow: -10px 0 35px -5px rgba(66, 16, 22, 0.12);
 }
 
 /* Subtle Micro-Animations */
 @keyframes floatSlow {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-7px); }
+  50% { transform: translateY(-6px); }
 }
 
 .animate-float-slow {
   animation: floatSlow 6s ease-in-out infinite;
 }
 
-.fade-in {
-  animation: fadeIn 0.3s ease-in-out forwards;
+.page-transition {
+  animation: pageFade 0.25s ease-out forwards;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.98); }
-  to { opacity: 1; transform: scale(1); }
+@keyframes pageFade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
 }

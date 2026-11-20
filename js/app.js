@@ -1,6 +1,8 @@
 (function() {
   const { useState, useEffect, useMemo } = React;
   function App() {
+    const [currentRoute, setCurrentRoute] = useState("home");
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [currency, setCurrency] = useState("USD");
     const [selectedCategory, setSelectedCategory] = useState("all");
     const [searchQuery, setSearchQuery] = useState("");
@@ -13,18 +15,6 @@
     const [selectedProduct, setSelectedProduct] = useState(null);
     const [toast, setToast] = useState(null);
     const [appliedPromo, setAppliedPromo] = useState(null);
-    const [timeLeft, setTimeLeft] = useState({ h: 4, m: 22, s: 18 });
-    useEffect(() => {
-      const interval = setInterval(() => {
-        setTimeLeft((prev) => {
-          if (prev.s > 0) return { ...prev, s: prev.s - 1 };
-          if (prev.m > 0) return { ...prev, m: 59, s: 59 };
-          if (prev.h > 0) return { h: prev.h - 1, m: 59, s: 59 };
-          return { h: 4, m: 30, s: 0 };
-        });
-      }, 1e3);
-      return () => clearInterval(interval);
-    }, []);
     const showToast = (msg) => {
       setToast(msg);
       setTimeout(() => setToast(null), 3500);
@@ -36,8 +26,8 @@
       return `${c.symbol}${amt.toFixed(0)}`;
     };
     const addToCart = (product, opts = {}) => {
-      const key = `${product.id}-${opts.monogram || "none"}-${opts.ribbon || "sage"}-${opts.rush ? "rush" : "std"}`;
-      const unitPrice = product.price + (opts.monogram ? 10 : 0) + (opts.rush ? 20 : 0);
+      const key = `${product.id}-${opts.monogram || "none"}-${opts.ribbon || "ruby"}`;
+      const unitPrice = product.price + (opts.monogram ? 10 : 0);
       setCart((prev) => {
         const idx = prev.findIndex((item) => item.key === key);
         if (idx > -1) {
@@ -103,6 +93,15 @@
         return true;
       });
     }, [selectedCategory, searchQuery, products]);
+    const handleSelectCategoryPage = (catId) => {
+      if (catId === "home") {
+        setCurrentRoute("home");
+      } else {
+        setCurrentRoute(catId);
+      }
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+    const currentCategoryObject = categories.find((c) => c.id === currentRoute);
     const {
       Navbar,
       Hero,
@@ -110,13 +109,14 @@
       ProductCatalog,
       EmergencyBanner,
       CorporateSection,
-      Testimonials,
       ContactSection,
       Footer,
       CustomBuilder,
-      Modals
+      Modals,
+      CategoriesMenu,
+      CategoryPage
     } = window.AniveComponents;
-    return /* @__PURE__ */ React.createElement("div", { className: "min-h-screen flex flex-col bg-[#F8FAF9] text-[#243330]" }, toast && /* @__PURE__ */ React.createElement("div", { className: "fixed bottom-6 right-6 z-50 bg-sage-900 text-white px-5 py-3 rounded-2xl shadow-luxury border border-sage-700/60 flex items-center gap-3 text-xs font-medium" }, /* @__PURE__ */ React.createElement("span", { className: "w-5 h-5 rounded-full bg-emerald-600 flex items-center justify-center text-white text-[10px]" }, "\u2713"), /* @__PURE__ */ React.createElement("span", null, toast)), /* @__PURE__ */ React.createElement(
+    return /* @__PURE__ */ React.createElement("div", { className: "min-h-screen flex flex-col bg-surface-100 text-[#241A1B]" }, toast && /* @__PURE__ */ React.createElement("div", { className: "fixed bottom-6 right-6 z-50 bg-mred-900 text-white px-5 py-3 rounded-2xl shadow-luxury border border-mred-700/60 flex items-center gap-3 text-xs font-medium" }, /* @__PURE__ */ React.createElement("span", { className: "w-5 h-5 rounded-full bg-mred-600 flex items-center justify-center text-white text-[10px]" }, "\u2713"), /* @__PURE__ */ React.createElement("span", null, toast)), /* @__PURE__ */ React.createElement(
       Navbar,
       {
         currency,
@@ -127,62 +127,98 @@
         setSearchQuery,
         onOpenCart: () => setIsCartOpen(true),
         onOpenBuilder: () => setIsBuilderOpen(true),
-        onOpenSourcing: () => setIsSourcingOpen(true)
-      }
-    ), /* @__PURE__ */ React.createElement("main", { className: "flex-1" }, /* @__PURE__ */ React.createElement(Hero, { onOpenBuilder: () => setIsBuilderOpen(true) }), /* @__PURE__ */ React.createElement(
-      Categories,
-      {
-        selectedCategory,
-        onSelectCategory: setSelectedCategory,
-        onOpenBuilder: () => setIsBuilderOpen(true),
-        onOpenSourcing: () => setIsSourcingOpen(true)
+        onOpenSourcing: () => setIsSourcingOpen(true),
+        onToggleMenu: () => setIsMenuOpen(!isMenuOpen),
+        onNavigateHome: () => handleSelectCategoryPage("home"),
+        onNavigateCategory: handleSelectCategoryPage
       }
     ), /* @__PURE__ */ React.createElement(
-      ProductCatalog,
+      CategoriesMenu,
       {
-        products: filteredProducts,
+        isOpen: isMenuOpen,
+        onToggle: () => setIsMenuOpen(!isMenuOpen),
         categories,
-        selectedCategory,
-        onSelectCategory: setSelectedCategory,
-        wishlist,
-        onToggleWishlist: toggleWishlist,
-        onSelectProduct: setSelectedProduct,
-        onAddToCart: addToCart,
-        formatPrice
+        activeCategoryId: currentRoute,
+        onSelectCategoryPage: handleSelectCategoryPage
       }
-    ), /* @__PURE__ */ React.createElement(
-      EmergencyBanner,
-      {
-        timeLeft,
-        onFilterEmergency: () => {
-          setSelectedCategory("emergency");
-          const el = document.getElementById("catalog");
-          el?.scrollIntoView({ behavior: "smooth" });
-        },
-        onShowToast: showToast
-      }
-    ), /* @__PURE__ */ React.createElement(
-      CorporateSection,
-      {
-        corpQty,
-        setCorpQty,
-        corpTier,
-        setCorpTier,
-        corpDeboss,
-        setCorpDeboss,
-        corpRibbon,
-        setCorpRibbon,
-        corpTotal,
-        corpUnitDiscounted,
-        corpDiscountRate,
-        formatPrice,
-        onShowToast: showToast
-      }
-    ), /* @__PURE__ */ React.createElement(Testimonials, null), /* @__PURE__ */ React.createElement(ContactSection, { onShowToast: showToast })), /* @__PURE__ */ React.createElement(
+    ), /* @__PURE__ */ React.createElement("main", { className: "flex-1" }, currentRoute === "home" ? (
+      /* HOME VIEW */
+      /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(
+        Hero,
+        {
+          onOpenBuilder: () => setIsBuilderOpen(true),
+          onToggleMenu: () => setIsMenuOpen(true)
+        }
+      ), /* @__PURE__ */ React.createElement(
+        Categories,
+        {
+          categories,
+          onSelectCategoryPage: handleSelectCategoryPage,
+          onOpenBuilder: () => setIsBuilderOpen(true),
+          onOpenSourcing: () => setIsSourcingOpen(true)
+        }
+      ), /* @__PURE__ */ React.createElement(
+        ProductCatalog,
+        {
+          products: filteredProducts,
+          categories,
+          selectedCategory,
+          onSelectCategory: setSelectedCategory,
+          onSelectCategoryPage: handleSelectCategoryPage,
+          wishlist,
+          onToggleWishlist: toggleWishlist,
+          onSelectProduct: setSelectedProduct,
+          onAddToCart: addToCart,
+          formatPrice
+        }
+      ), /* @__PURE__ */ React.createElement(
+        EmergencyBanner,
+        {
+          onFilterEmergency: () => handleSelectCategoryPage("emergency"),
+          onShowToast: showToast
+        }
+      ), /* @__PURE__ */ React.createElement(
+        CorporateSection,
+        {
+          corpQty,
+          setCorpQty,
+          corpTier,
+          setCorpTier,
+          corpDeboss,
+          setCorpDeboss,
+          corpRibbon,
+          setCorpRibbon,
+          corpTotal,
+          corpUnitDiscounted,
+          corpDiscountRate,
+          formatPrice,
+          onShowToast: showToast
+        }
+      ), /* @__PURE__ */ React.createElement(ContactSection, { onShowToast: showToast }))
+    ) : (
+      /* DEDICATED INDIVIDUAL CATEGORY PAGE VIEW */
+      /* @__PURE__ */ React.createElement(
+        CategoryPage,
+        {
+          category: currentCategoryObject,
+          categories,
+          products,
+          onNavigateHome: () => handleSelectCategoryPage("home"),
+          onNavigateCategory: handleSelectCategoryPage,
+          onSelectProduct: setSelectedProduct,
+          onAddToCart: addToCart,
+          onOpenBuilder: () => setIsBuilderOpen(true),
+          onOpenSourcing: () => setIsSourcingOpen(true),
+          wishlist,
+          onToggleWishlist: toggleWishlist,
+          formatPrice
+        }
+      )
+    )), /* @__PURE__ */ React.createElement(
       Footer,
       {
         categories,
-        onSelectCategory: setSelectedCategory,
+        onSelectCategoryPage: handleSelectCategoryPage,
         onShowToast: showToast
       }
     ), /* @__PURE__ */ React.createElement(

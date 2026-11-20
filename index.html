@@ -7,15 +7,15 @@
   <meta name="description" content="ANIVE.CO | GIFTING — Modern, calm luxury gifting. Bridesmaids gift boxes, corporate gifting, emergency last-minute gifts, personalised keepsakes, and custom gift curation." />
   
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2353726A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><rect width='20' height='14' x='2' y='7' rx='2'/><path d='M12 7V2'/><path d='m7 2 5 5 5-5'/><path d='M12 7v14'/></svg>" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238E2A33' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><rect width='20' height='14' x='2' y='7' rx='2'/><path d='M12 7V2'/><path d='m7 2 5 5 5-5'/><path d='M12 7v14'/></svg>" />
 
-  <!-- 1. PRESENTATION LAYER: STYLESHEET (Separation of Concerns: CSS) -->
+  <!-- 1. PRESENTATION LAYER: STYLESHEET (Material Design Calm Red) -->
   <link rel="stylesheet" href="css/styles.css" />
 
   <!-- 2. STYLING ENGINE: Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- 3. CONFIGURATION LAYER: Tailwind Theme Tokens & Currency Config -->
+  <!-- 3. CONFIGURATION LAYER: Material Design Red Tokens & Currency Config -->
   <script src="js/config.js"></script>
 
   <!-- 4. CORE LIBRARIES: React 18 & ReactDOM UMD -->
@@ -25,14 +25,14 @@
   <!-- 5. ANIMATION ENGINE: Canvas Confetti -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
 </head>
-<body class="selection:bg-sage-200 selection:text-sage-900 overflow-x-hidden">
+<body class="selection:bg-mred-200 selection:text-mred-950 overflow-x-hidden">
   
   <!-- 6. STRUCTURE LAYER: HTML Semantic Container -->
   <div id="root">
-    <div class="min-h-screen flex items-center justify-center bg-[#F8FAF9]">
+    <div class="min-h-screen flex items-center justify-center bg-surface-100">
       <div class="text-center space-y-3">
-        <div class="text-2xl font-serif text-sage-900 tracking-widest font-editorial">ANIVE.CO | GIFTING</div>
-        <p class="text-xs text-sage-500 font-sans tracking-wide">Preparing Atelier Collections...</p>
+        <div class="text-2xl font-serif text-mred-950 tracking-widest font-editorial">ANIVE.CO | GIFTING</div>
+        <p class="text-xs text-mred-600 font-sans tracking-wide">Preparing Atelier Collections...</p>
       </div>
     </div>
   </div>
@@ -46,9 +46,11 @@
   <script src="js/components/Navbar.js"></script>
   <script src="js/components/Hero.js"></script>
   <script src="js/components/Categories.js"></script>
+  <script src="js/components/CategoriesMenu.js"></script>
+  <script src="js/components/CategoryPage.js"></script>
   <script src="js/components/ProductCatalog.js"></script>
   <script src="js/components/EmergencyBanner.js"></script>
-  <script src="js/components/Testimonials.js"></script>
+  <script src="js/components/ContactSection.js"></script>
   <script src="js/components/Footer.js"></script>
   <script src="js/components/CustomBuilder.js"></script>
   <script src="js/components/Modals.js"></script>

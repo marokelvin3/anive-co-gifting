@@ -1,43 +1,31 @@
-// ANIVE.CO | GIFTING Configuration & Theme Setup
+// ANIVE.CO | GIFTING Configuration & Material Design Color System (Calm Red)
 window.AniveConfig = {
   theme: {
     colors: {
-      sage: {
-        50: '#F4F7F6',
-        100: '#E5ECE9',
-        200: '#CDDAD5',
-        300: '#AFC3BD',
-        400: '#8DAAA2',
-        500: '#6D9087',
-        600: '#53726A',
-        700: '#405852',
-        800: '#30423D',
-        900: '#222F2C',
-        950: '#151E1C',
+      // Material Design 3 Calm Red Palette
+      mred: {
+        50: '#FCF7F7',
+        100: '#F8E9EA',
+        200: '#F2D5D7',
+        300: '#E5ACB0',
+        400: '#CE747B',
+        500: '#B04A53',
+        600: '#8E2A33',  // Primary calm luxury red
+        700: '#782129',
+        800: '#621A20',
+        900: '#4A1218',
+        950: '#2E0A0E',
       },
-      slatecool: {
-        50: '#F5F7FA',
-        100: '#E7ECF2',
-        200: '#D1DBE5',
-        300: '#B0C2D4',
-        400: '#85A2BE',
-        500: '#6485A5',
-        600: '#4E6B87',
-        700: '#3D536A',
-        800: '#2F3F50',
-        900: '#1E2935',
-      },
-      frost: {
-        50: '#FAFCFD',
-        100: '#F2F6F9',
-        200: '#E5EDF2',
-        300: '#D2DFE8',
+      surface: {
+        50: '#FFFFFF',
+        100: '#FCF9F9',
+        200: '#F7F2F2',
+        300: '#F2EAEA',
       },
       accent: {
         champagne: '#D4AF37',
-        silver: '#C5CAD1',
-        rosewater: '#EAD7D7',
-        seafoam: '#9BB8AF',
+        silver: '#D7C1C2',
+        rosewater: '#F4DDDE',
       }
     },
     fontFamily: {
@@ -45,9 +33,9 @@ window.AniveConfig = {
       sans: ['"Plus Jakarta Sans"', 'sans-serif'],
     },
     boxShadow: {
-      'soft': '0 8px 30px rgba(78, 107, 135, 0.07)',
-      'luxury': '0 20px 40px -15px rgba(34, 47, 44, 0.08)',
-      'float': '0 30px 60px -12px rgba(47, 63, 80, 0.12)',
+      'soft': '0 8px 30px rgba(74, 18, 24, 0.05)',
+      'luxury': '0 20px 40px -15px rgba(46, 10, 14, 0.08)',
+      'float': '0 30px 60px -12px rgba(66, 16, 22, 0.14)',
     }
   },
   currencies: {
@@ -59,7 +47,7 @@ window.AniveConfig = {
   }
 };
 
-// Initialize Tailwind config if Tailwind is present
+// Initialize Tailwind config with Material Design Red palette
 if (window.tailwind) {
   window.tailwind.config = {
     theme: {
