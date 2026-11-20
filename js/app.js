@@ -130,7 +130,7 @@
       "button",
       {
         onClick: () => handleSearchSubmit(searchFilteredCategory.id),
-        className: "bg-[#59171B] text-[#FED7B8] px-3 py-1 rounded-full font-bold hover:bg-[#471015]"
+        className: "bg-[#59171B] text-[#FED7B8] px-3 py-1 rounded-full font-bold hover:bg-[#471015] active:scale-95 transition"
       },
       "View Department Page \u2192"
     ) : /* @__PURE__ */ React.createElement(
@@ -153,7 +153,7 @@
       }
     ), /* @__PURE__ */ React.createElement("main", { className: "flex-1" }, currentRoute === "home" ? (
       /* HOME VIEW - Concise, pure home information, NO endless product catalog clutter */
-      /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(
+      /* @__PURE__ */ React.createElement("div", { className: "page-transition" }, /* @__PURE__ */ React.createElement(
         Hero,
         {
           onOpenBuilder: () => setIsBuilderOpen(true),
@@ -179,7 +179,7 @@
       ))
     ) : (
       /* DEDICATED STANDALONE CATEGORY PAGE - Carries all category products and specific tools */
-      /* @__PURE__ */ React.createElement(
+      /* @__PURE__ */ React.createElement("div", { className: "page-transition", key: currentRoute }, /* @__PURE__ */ React.createElement(
         CategoryPage,
         {
           category: currentCategoryObject,
@@ -207,15 +207,8 @@
           corpDiscountRate,
           onShowToast: showToast
         }
-      )
-    )), /* @__PURE__ */ React.createElement(
-      Footer,
-      {
-        categories,
-        onSelectCategoryPage: handleSelectCategoryPage,
-        onShowToast: showToast
-      }
-    ), /* @__PURE__ */ React.createElement(
+      ))
+    )), /* @__PURE__ */ React.createElement(Footer, { onShowToast: showToast }), /* @__PURE__ */ React.createElement(
       CustomBuilder,
       {
         isOpen: isBuilderOpen,

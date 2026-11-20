@@ -9,10 +9,15 @@
   --md-sys-color-primary-container: #FED7B8;
   --md-sys-color-on-primary-container: #59171B;
   --md-sys-color-surface: #FFF9F5;
-  --md-sys-color-on-surface: #340A0E;
+  --md-sys-color-on-surface: #210507;
   --md-sys-color-surface-variant: #FDF2E9;
   --md-sys-color-outline: #8F2830;
   --md-sys-color-outline-variant: #FED7B8;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -21,6 +26,7 @@ body {
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  touch-action: manipulation;
 }
 
 .font-editorial {
@@ -87,34 +93,61 @@ body {
 
 /* Smooth Side Drawer Shadow */
 .menu-drawer-shadow {
-  box-shadow: -10px 0 35px -5px rgba(89, 23, 27, 0.16);
+  box-shadow: -12px 0 40px -5px rgba(89, 23, 27, 0.2);
 }
 
-/* Subtle Micro-Animations */
-@keyframes floatSlow {
+/* React Motion & Page Entrance Animations */
+@keyframes pageEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.995);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.page-transition {
+  animation: pageEnter 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: opacity, transform;
+}
+
+/* Drawer Motion */
+@keyframes drawerSlideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-drawer-in {
+  animation: drawerSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Subtle Interactive Card Elevate */
+.card-hover-effect {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-4px);
+}
+
+/* Soft Floating Pulse */
+@keyframes floatGentle {
   0%, 100% {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
   }
 }
 
-.animate-float-slow {
-  animation: floatSlow 6s ease-in-out infinite;
-}
-
-.page-transition {
-  animation: pageFade 0.25s ease-out forwards;
-}
-
-@keyframes pageFade {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.animate-float-gentle {
+  animation: floatGentle 5s ease-in-out infinite;
 }

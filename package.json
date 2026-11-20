@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/build.cjs",
     "preview": "vite preview",
     "compile:components": "esbuild js/components/*.js js/app.js --loader:.js=jsx --jsx=transform --outdir=js --allow-overwrite"
   },

@@ -12,7 +12,7 @@ window.AniveComponents.CategoriesMenu = function CategoriesMenu({
     "button",
     {
       onClick: onToggle,
-      className: "bg-[#59171B] hover:bg-[#471015] text-[#FED7B8] py-3.5 px-3 rounded-l-2xl shadow-float flex flex-col items-center gap-2 transition duration-300 group border-l-2 border-t-2 border-b-2 border-[#FED7B8]/50",
+      className: "bg-[#59171B] hover:bg-[#471015] text-[#FED7B8] py-3.5 px-3 rounded-l-2xl shadow-float flex flex-col items-center gap-2 transition duration-300 group border-l-2 border-t-2 border-b-2 border-[#FED7B8]/50 active:scale-95",
       title: "Open Navigation Menu & 15 Department Pages",
       "aria-label": "Open Menu and 15 Departments"
     },
@@ -23,9 +23,9 @@ window.AniveComponents.CategoriesMenu = function CategoriesMenu({
     "div",
     {
       onClick: onToggle,
-      className: "absolute inset-0 bg-[#210507]/60 backdrop-blur-sm transition-opacity"
+      className: "absolute inset-0 bg-[#210507]/60 backdrop-blur-sm transition-opacity duration-300"
     }
-  ), /* @__PURE__ */ React.createElement("div", { className: "fixed inset-y-0 right-0 max-w-full flex pl-6 sm:pl-10" }, /* @__PURE__ */ React.createElement("div", { className: "w-screen max-w-md sm:max-w-lg bg-white shadow-2xl flex flex-col border-l border-[#FED7B8]/60 menu-drawer-shadow" }, /* @__PURE__ */ React.createElement("div", { className: "p-5 border-b border-mred-100 flex items-center justify-between bg-[#FFF9F5]" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-center gap-3" }, /* @__PURE__ */ React.createElement("div", { className: "w-8 h-8 rounded-full bg-[#59171B] text-[#FED7B8] flex items-center justify-center font-bold text-xs border border-[#FED7B8]" }, "15"), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h3", { className: "font-editorial text-xl font-medium text-[#210507]" }, "ANIVE.CO Atelier Menu"), /* @__PURE__ */ React.createElement("p", { className: "text-[11px] text-[#59171B] font-medium" }, "Navigation & 15 Dedicated Department Pages"))), /* @__PURE__ */ React.createElement(
+  ), /* @__PURE__ */ React.createElement("div", { className: "fixed inset-y-0 right-0 max-w-full flex pl-4 sm:pl-10" }, /* @__PURE__ */ React.createElement("div", { className: "w-screen max-w-md sm:max-w-lg bg-white shadow-2xl flex flex-col border-l border-[#FED7B8]/60 menu-drawer-shadow animate-drawer-in" }, /* @__PURE__ */ React.createElement("div", { className: "p-4 sm:p-5 border-b border-mred-100 flex items-center justify-between bg-[#FFF9F5]" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-center gap-3" }, /* @__PURE__ */ React.createElement("div", { className: "w-8 h-8 rounded-full bg-[#59171B] text-[#FED7B8] flex items-center justify-center font-bold text-xs border border-[#FED7B8]" }, "15"), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h3", { className: "font-editorial text-xl font-medium text-[#210507]" }, "ANIVE.CO Atelier Menu"), /* @__PURE__ */ React.createElement("p", { className: "text-[11px] text-[#59171B] font-medium" }, "Navigation & 15 Dedicated Department Pages"))), /* @__PURE__ */ React.createElement(
     "button",
     {
       onClick: onToggle,
@@ -33,14 +33,14 @@ window.AniveComponents.CategoriesMenu = function CategoriesMenu({
       "aria-label": "Close menu"
     },
     "\u2715"
-  )), /* @__PURE__ */ React.createElement("div", { className: "flex-1 overflow-y-auto p-5 space-y-6" }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { className: "text-[10px] font-bold uppercase tracking-widest text-[#8F2830] mb-2.5" }, "Main Navigation"), /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-1 sm:grid-cols-2 gap-2" }, /* @__PURE__ */ React.createElement(
+  )), /* @__PURE__ */ React.createElement("div", { className: "flex-1 overflow-y-auto p-4 sm:p-5 space-y-6" }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { className: "text-[10px] font-bold uppercase tracking-widest text-[#8F2830] mb-2.5" }, "Main Navigation"), /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-1 sm:grid-cols-2 gap-2" }, /* @__PURE__ */ React.createElement(
     "button",
     {
       onClick: () => {
         onSelectCategoryPage("home");
         onToggle();
       },
-      className: "flex items-center justify-between p-3 rounded-xl bg-mred-50/70 hover:bg-[#FED7B8]/30 border border-mred-100 text-left transition group"
+      className: "flex items-center justify-between p-3 rounded-xl bg-mred-50/70 hover:bg-[#FED7B8]/30 border border-mred-100 text-left transition group active:scale-[0.99]"
     },
     /* @__PURE__ */ React.createElement("div", { className: "flex items-center gap-2.5" }, /* @__PURE__ */ React.createElement("span", { className: "text-base" }, "\u{1F3E1}"), /* @__PURE__ */ React.createElement("span", { className: "text-xs font-bold text-mred-950 group-hover:text-[#59171B]" }, "Home")),
     /* @__PURE__ */ React.createElement("span", { className: "text-xs text-mred-400 group-hover:translate-x-0.5 transition" }, "\u2192")
@@ -55,7 +55,7 @@ window.AniveComponents.CategoriesMenu = function CategoriesMenu({
         }, 100);
         onToggle();
       },
-      className: "flex items-center justify-between p-3 rounded-xl bg-mred-50/70 hover:bg-[#FED7B8]/30 border border-mred-100 text-left transition group"
+      className: "flex items-center justify-between p-3 rounded-xl bg-mred-50/70 hover:bg-[#FED7B8]/30 border border-mred-100 text-left transition group active:scale-[0.99]"
     },
     /* @__PURE__ */ React.createElement("div", { className: "flex items-center gap-2" }, /* @__PURE__ */ React.createElement("span", { className: "text-base" }, "\u2728"), /* @__PURE__ */ React.createElement("span", { className: "text-xs font-bold text-mred-950 group-hover:text-[#59171B]" }, "All Departments")),
     /* @__PURE__ */ React.createElement("span", { className: "bg-[#59171B] text-[#FED7B8] text-[9px] px-1.5 py-0.5 rounded-full font-bold" }, "15 Pages")
@@ -66,7 +66,7 @@ window.AniveComponents.CategoriesMenu = function CategoriesMenu({
         if (onOpenBuilder) onOpenBuilder();
         onToggle();
       },
-      className: "flex items-center justify-between p-3 rounded-xl bg-mred-50/70 hover:bg-[#FED7B8]/30 border border-mred-100 text-left transition group"
+      className: "flex items-center justify-between p-3 rounded-xl bg-mred-50/70 hover:bg-[#FED7B8]/30 border border-mred-100 text-left transition group active:scale-[0.99]"
     },
     /* @__PURE__ */ React.createElement("div", { className: "flex items-center gap-2" }, /* @__PURE__ */ React.createElement("span", { className: "text-base" }, "\u{1F381}"), /* @__PURE__ */ React.createElement("span", { className: "text-xs font-bold text-mred-950 group-hover:text-[#59171B]" }, "Custom Box Studio")),
     /* @__PURE__ */ React.createElement("span", { className: "bg-[#FED7B8] text-[#59171B] text-[9px] px-1.5 py-0.5 rounded font-semibold uppercase" }, "Interactive")
@@ -77,7 +77,7 @@ window.AniveComponents.CategoriesMenu = function CategoriesMenu({
         onSelectCategoryPage("emergency");
         onToggle();
       },
-      className: "flex items-center justify-between p-3 rounded-xl bg-mred-50/70 hover:bg-[#FED7B8]/30 border border-mred-100 text-left transition group"
+      className: "flex items-center justify-between p-3 rounded-xl bg-mred-50/70 hover:bg-[#FED7B8]/30 border border-mred-100 text-left transition group active:scale-[0.99]"
     },
     /* @__PURE__ */ React.createElement("div", { className: "flex items-center gap-2.5" }, /* @__PURE__ */ React.createElement("span", { className: "text-base" }, "\u26A1"), /* @__PURE__ */ React.createElement("span", { className: "text-xs font-bold text-mred-950 group-hover:text-[#59171B]" }, "Emergency Gifting")),
     /* @__PURE__ */ React.createElement("span", { className: "text-xs text-mred-400 group-hover:translate-x-0.5 transition" }, "\u2192")
@@ -88,7 +88,7 @@ window.AniveComponents.CategoriesMenu = function CategoriesMenu({
         onSelectCategoryPage("corporate");
         onToggle();
       },
-      className: "flex items-center justify-between p-3 rounded-xl bg-mred-50/70 hover:bg-[#FED7B8]/30 border border-mred-100 text-left transition group"
+      className: "flex items-center justify-between p-3 rounded-xl bg-mred-50/70 hover:bg-[#FED7B8]/30 border border-mred-100 text-left transition group active:scale-[0.99]"
     },
     /* @__PURE__ */ React.createElement("div", { className: "flex items-center gap-2.5" }, /* @__PURE__ */ React.createElement("span", { className: "text-base" }, "\u{1F3E2}"), /* @__PURE__ */ React.createElement("span", { className: "text-xs font-bold text-mred-950 group-hover:text-[#59171B]" }, "Corporate Gifting")),
     /* @__PURE__ */ React.createElement("span", { className: "text-xs text-mred-400 group-hover:translate-x-0.5 transition" }, "\u2192")
@@ -100,7 +100,7 @@ window.AniveComponents.CategoriesMenu = function CategoriesMenu({
         el?.scrollIntoView({ behavior: "smooth" });
         onToggle();
       },
-      className: "flex items-center justify-between p-3 rounded-xl bg-mred-50/70 hover:bg-[#FED7B8]/30 border border-mred-100 text-left transition group"
+      className: "flex items-center justify-between p-3 rounded-xl bg-mred-50/70 hover:bg-[#FED7B8]/30 border border-mred-100 text-left transition group active:scale-[0.99]"
     },
     /* @__PURE__ */ React.createElement("div", { className: "flex items-center gap-2.5" }, /* @__PURE__ */ React.createElement("span", { className: "text-base" }, "\u{1F48C}"), /* @__PURE__ */ React.createElement("span", { className: "text-xs font-bold text-mred-950 group-hover:text-[#59171B]" }, "Contact Us")),
     /* @__PURE__ */ React.createElement("span", { className: "text-xs text-mred-400 group-hover:translate-x-0.5 transition" }, "\u2192")
@@ -114,7 +114,7 @@ window.AniveComponents.CategoriesMenu = function CategoriesMenu({
           onSelectCategoryPage(cat.id);
           onToggle();
         },
-        className: `w-full text-left p-3 rounded-2xl transition flex items-center gap-3.5 border ${isActive ? "bg-[#FFF9F5] border-[#59171B] shadow-sm ring-1 ring-[#59171B]/30" : "bg-white hover:bg-mred-50/50 border-mred-100 hover:border-mred-300"}`
+        className: `w-full text-left p-3 rounded-2xl transition flex items-center gap-3.5 border active:scale-[0.99] ${isActive ? "bg-[#FFF9F5] border-[#59171B] shadow-sm ring-1 ring-[#59171B]/30" : "bg-white hover:bg-mred-50/50 border-mred-100 hover:border-mred-300"}`
       },
       /* @__PURE__ */ React.createElement("div", { className: "w-12 h-12 rounded-xl overflow-hidden shrink-0 border border-mred-200 relative bg-mred-50" }, /* @__PURE__ */ React.createElement(
         "img",
